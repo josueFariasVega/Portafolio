@@ -28,8 +28,8 @@ export function SkillsSection() {
       accent: 'from-blue-500/20 to-purple-500/20'
     },
     {
-      id: 'backend' as CategoryType,
-      name: 'Backend',
+      id: 'backend' as CategoryType, 
+      name: 'Backend', 
       subtitle: 'Arquitecturas robustas y APIs escalables',
       icon: Cpu,
       skills: SKILLS.filter(skill => skill.category === 'backend'),
@@ -66,9 +66,10 @@ export function SkillsSection() {
           viewport={{ once: true }}
           className="text-center mb-20 relative"
         >
+          {/* Floating elements */}
           <motion.div
             className="absolute -top-10 left-1/4 w-2 h-2 bg-white/40 rounded-full"
-            animate={{
+            animate={{ 
               y: [0, -20, 0],
               opacity: [0.4, 1, 0.4],
               scale: [1, 1.2, 1]
@@ -77,7 +78,7 @@ export function SkillsSection() {
           />
           <motion.div
             className="absolute -top-6 right-1/3 w-1 h-1 bg-white/60 rounded-full"
-            animate={{
+            animate={{ 
               y: [0, -15, 0],
               opacity: [0.6, 1, 0.6]
             }}
@@ -96,8 +97,8 @@ export function SkillsSection() {
               & Herramientas
             </h2>
           </motion.div>
-
-          <motion.p
+          
+          <motion.p 
             className="apple-body text-gray-400 text-xl max-w-3xl mx-auto leading-relaxed"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -121,15 +122,15 @@ export function SkillsSection() {
             {categories.map((category) => {
               const isActive = selectedCategory === category.id;
               const Icon = category.icon;
-
+              
               return (
                 <motion.button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`
                     relative group px-6 py-3 rounded-xl transition-all duration-300
-                    ${isActive
-                      ? 'bg-white text-black'
+                    ${isActive 
+                      ? 'bg-white text-black' 
                       : 'bg-black/40 text-gray-400 hover:text-white border border-gray-800/50 hover:border-gray-700/70'
                     }
                   `}
@@ -141,7 +142,8 @@ export function SkillsSection() {
                     <Icon className={`w-4 h-4 ${isActive ? 'text-black' : 'text-gray-400 group-hover:text-white'}`} />
                     <span className="text-sm">{category.name}</span>
                   </div>
-
+                  
+                  {/* Active indicator */}
                   {isActive && (
                     <motion.div
                       layoutId="activeCategory"
@@ -164,7 +166,8 @@ export function SkillsSection() {
           transition={{ duration: 0.4 }}
           className="relative"
         >
-          <motion.div
+          {/* Category Header */}
+          <motion.div 
             className="flex items-center justify-center mb-12 relative"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -173,7 +176,7 @@ export function SkillsSection() {
             <div className="absolute inset-0 flex items-center justify-center">
               <div className={`w-64 h-px bg-gradient-to-r ${activeCategory.accent} opacity-50`} />
             </div>
-
+            
             <div className="relative bg-black/60 backdrop-blur-xl border border-gray-800/50 rounded-2xl px-8 py-4 flex items-center gap-4">
               <motion.div
                 className="w-10 h-10 bg-gradient-to-br from-gray-900/80 to-black/60 border border-gray-700/50 rounded-xl flex items-center justify-center"
@@ -182,7 +185,7 @@ export function SkillsSection() {
               >
                 <activeCategory.icon className="w-5 h-5 text-white" />
               </motion.div>
-
+              
               <div className="text-center">
                 <h3 className="apple-subtitle text-xl text-white">
                   {activeCategory.name}
@@ -194,6 +197,7 @@ export function SkillsSection() {
             </div>
           </motion.div>
 
+          {/* Skills Grid */}
           <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
             initial="hidden"
@@ -201,14 +205,14 @@ export function SkillsSection() {
             variants={staggerContainer}
           >
             {activeCategory.skills.map((skill, index) => (
-              <motion.div
-                key={skill.id}
+              <motion.div 
+                key={skill.id} 
                 variants={fadeInUp}
                 layout
               >
-                <TechCardIphone
-                  skill={skill}
-                  index={index}
+                <TechCardIphone 
+                  skill={skill} 
+                  index={index} 
                 />
               </motion.div>
             ))}
@@ -223,8 +227,9 @@ export function SkillsSection() {
           viewport={{ once: true }}
           className="mt-24 relative"
         >
+          {/* Gradient background */}
           <div className="absolute inset-0 bg-gradient-to-r from-white/5 via-transparent to-white/5 rounded-3xl blur-3xl" />
-
+          
           <div className="relative bg-black/40 backdrop-blur-xl border border-gray-800/30 rounded-3xl p-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {[
@@ -236,20 +241,22 @@ export function SkillsSection() {
                 <motion.div
                   key={stat.label}
                   className="text-center group cursor-pointer"
-                  whileHover={{
+                  whileHover={{ 
                     scale: 1.05,
                     y: -4
                   }}
+                  transition={{ type: "spring", stiffness: 400 }}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{
-                    duration: 0.6,
+                  // @ts-ignore
+                  transition={{ 
+                    duration: 0.6, 
                     delay: stat.delay,
                     ease: [0.25, 0.46, 0.45, 0.94]
                   }}
                 >
-                  <motion.div
+                  <motion.div 
                     className="apple-title text-3xl md:text-4xl text-white mb-2 group-hover:text-gray-200 transition-colors"
                     whileHover={{ scale: 1.1 }}
                   >
@@ -265,6 +272,7 @@ export function SkillsSection() {
         </motion.div>
       </div>
 
+      {/* Enhanced Background Elements */}
       <motion.div
         className="absolute top-1/4 left-0 w-px h-40 bg-gradient-to-b from-transparent via-white/20 to-transparent"
         animate={{ opacity: [0.2, 0.8, 0.2] }}
@@ -275,7 +283,8 @@ export function SkillsSection() {
         animate={{ opacity: [0.8, 0.2, 0.8] }}
         transition={{ duration: 3, repeat: Infinity, delay: 1 }}
       />
-
+      
+      {/* Floating particles */}
       {[...Array(6)].map((_, i) => (
         <motion.div
           key={i}
