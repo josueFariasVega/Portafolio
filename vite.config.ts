@@ -11,25 +11,12 @@ export default defineConfig({
     },
   },
   build: {
-    target: 'esnext',
     outDir: 'build',
     assetsDir: 'assets',
-    sourcemap: false,
-    minify: 'esbuild',
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          ui: ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu'],
-        },
-      },
-    },
+    sourcemap: false
   },
   server: {
     port: 3000,
     open: true,
-  },
-  define: {
-    __APP_VERSION__: JSON.stringify(process.env.npm_package_version || '1.0.0'),
-  },
+  }
 });
