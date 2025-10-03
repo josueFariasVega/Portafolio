@@ -5,11 +5,6 @@
   "installCommand": "npm install",
   "framework": "vite",
   "regions": ["iad1"],
-  "functions": {
-    "src/pages/api/**/*.js": {
-      "runtime": "@vercel/node"
-    }
-  },
   "headers": [
     {
       "source": "/(.*)",
