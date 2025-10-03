@@ -12,6 +12,23 @@ interface Particle {
 
 export function AnimatedBackground() {
   const [particles, setParticles] = useState<Particle[]>([]);
+  const [dimensions, setDimensions] = useState<{ width: number; height: number }>({
+    width: 0,
+    height: 0,
+  });
+
+  useEffect(() => {
+    const updateDimensions = () => {
+      setDimensions({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    updateDimensions();
+    window.addEventListener('resize', updateDimensions);
+    return () => window.removeEventListener('resize', updateDimensions);
+  }, []);
 
   useEffect(() => {
     const generateParticles = () => {
@@ -19,8 +36,8 @@ export function AnimatedBackground() {
       for (let i = 0; i < 50; i++) {
         newParticles.push({
           id: i,
-          x: Math.random() * window.innerWidth,
-          y: Math.random() * window.innerHeight,
+          x: Math.random() * dimensions.width,
+          y: Math.random() * dimensions.height,
           size: Math.random() * 2 + 1,
           speedX: (Math.random() - 0.5) * 0.5,
           speedY: (Math.random() - 0.5) * 0.5,
@@ -29,14 +46,14 @@ export function AnimatedBackground() {
       setParticles(newParticles);
     };
 
-    generateParticles();
-    window.addEventListener('resize', generateParticles);
-    return () => window.removeEventListener('resize', generateParticles);
-  }, []);
+    if (dimensions.width > 0 && dimensions.height > 0) {
+      generateParticles();
+    }
+  }, [dimensions]);
 
   useEffect(() => {
     const animateParticles = () => {
-      setParticles(prev => 
+      setParticles(prev =>
         prev.map(particle => ({
           ...particle,
           x: particle.x + particle.speedX,
@@ -99,7 +116,7 @@ export function AnimatedBackground() {
           ease: "easeInOut",
         }}
       />
-      
+
       <motion.div
         className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-l from-gray-700/20 to-transparent rounded-full blur-3xl"
         animate={{
