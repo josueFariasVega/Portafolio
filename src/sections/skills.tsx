@@ -4,8 +4,42 @@ import { SKILLS } from '../lib/constants';
 import { fadeInUp, staggerContainer } from '../lib/animations';
 import { Code2, Cpu, Palette, Wrench, Layers } from 'lucide-react';
 import { useState } from 'react';
+import { IconCloud } from '@/components/ui/icon-cloud';
 
 type CategoryType = 'all' | 'frontend' | 'backend' | 'design' | 'tools';
+
+const slugs = [
+  "typescript",
+  "javascript",
+  "dart",
+  "java",
+  "react",
+  "flutter",
+  "android",
+  "html5",
+  "css3",
+  "nodedotjs",
+  "express",
+  "nextdotjs",
+  "prisma",
+  "amazonaws",
+  "postgresql",
+  "firebase",
+  "nginx",
+  "vercel",
+  "testinglibrary",
+  "jest",
+  "cypress",
+  "docker",
+  "git",
+  "jira",
+  "github",
+  "gitlab",
+  "visualstudiocode",
+  "androidstudio",
+  "sonarqube",
+  "figma",
+]
 
 export function SkillsSection() {
   const [selectedCategory, setSelectedCategory] = useState<CategoryType>('all');
@@ -54,6 +88,10 @@ export function SkillsSection() {
   ];
 
   const activeCategory = categories.find(cat => cat.id === selectedCategory) || categories[0];
+
+  const images = slugs.map(
+    (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`
+  )
 
   return (
     <section id="skills" className="py-24 px-4 relative overflow-hidden">
@@ -109,6 +147,10 @@ export function SkillsSection() {
             <span className="text-gray-500">con arquitectura escalable y experiencias excepcionales</span>
           </motion.p>
         </motion.div>
+
+        <div className="relative flex size-full items-center justify-center overflow-hidden">
+          <IconCloud images={images} />
+        </div>
 
         {/* Category Filters */}
         <motion.div
@@ -167,7 +209,7 @@ export function SkillsSection() {
           className="relative"
         >
           {/* Category Header */}
-          <motion.div 
+          {/*<motion.div 
             className="flex items-center justify-center mb-12 relative"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -183,7 +225,7 @@ export function SkillsSection() {
                 whileHover={{ rotateY: 180, scale: 1.1 }}
                 transition={{ type: "spring", stiffness: 400 }}
               >
-                <activeCategory.icon className="w-5 h-5 text-white" />
+                <Icon className="w-5 h-5 text-white" />
               </motion.div>
               
               <div className="text-center">
@@ -195,7 +237,7 @@ export function SkillsSection() {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </motion.div>*/}
 
           {/* Skills Grid */}
           <motion.div
@@ -245,16 +287,14 @@ export function SkillsSection() {
                     scale: 1.05,
                     y: -4
                   }}
-                  transition={{ type: "spring", stiffness: 400 }}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  // @ts-ignore
-                  transition={{ 
-                    duration: 0.6, 
+                  transition={{
+                    duration: 0.6,
                     delay: stat.delay,
                     ease: [0.25, 0.46, 0.45, 0.94]
                   }}
+                  viewport={{ once: true }}
                 >
                   <motion.div 
                     className="apple-title text-3xl md:text-4xl text-white mb-2 group-hover:text-gray-200 transition-colors"

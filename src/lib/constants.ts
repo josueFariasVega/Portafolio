@@ -7,7 +7,7 @@ import {
 
 export const PERSONAL_INFO = {
   name: "Josué Farías",
-  title: "Fullstack Developer",
+  title: "Fullstack Developer Junior",
   subtitle:
     "Creando experiencias digitales excepcionales con tecnologías modernas",
   bio: "Desarrollador Fullstack de Asunción, Paraguay con pasión por crear soluciones digitales innovadoras. Combino +1 año de experiencia práctica con habilidades en diseño, pensamiento sistemático y visión estratégica para desarrollar aplicaciones web escalables.",
@@ -171,7 +171,7 @@ export const PROJECTS: Project[] = [
       "Framer Motion",
       "OpenAI API",
     ],
-    imageUrl: "https://images.unsplash.com/photo-1575388902449-6bca946ad549?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxudXRyaXRpb24lMjBkYXNoYm9hcmQlMjBpbnRlcmZhY2V8ZW58MXx8fHwxNzU5NDEzNDM5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    imageUrl: "https://subir-imagen.com/images/2025/10/01/Screenshot-2025-10-01-124639.png",
     githubUrl: "https://github.com/josueFariasVega/nutri-ai",
     liveUrl: "https://nutri-ai-sigma.vercel.app/",
     featured: true,
