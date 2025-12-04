@@ -1,0 +1,17 @@
+0000000000000000000000000000000000000000 4f914a5b0b32d2043f33a89ec66a8a29653b42b9 josueFariasVega <jf0981157235@gmail.com> 1759532303 -0300	clone: from https://github.com/josueFariasVega/Portafolio.git
+4f914a5b0b32d2043f33a89ec66a8a29653b42b9 036311c62b2088ef43ef66eef59f4be76ff30858 josueFariasVega <jf0981157235@gmail.com> 1759533181 -0300	commit: Ultimo Intento
+036311c62b2088ef43ef66eef59f4be76ff30858 dd78c3eb6482154f42d9cfdbd9e8a1781335077d josueFariasVega <jf0981157235@gmail.com> 1759533374 -0300	commit: Fix Vercel deployment: Move Vite to devDependencies and update install command
+dd78c3eb6482154f42d9cfdbd9e8a1781335077d aa9aca1b21f3bd7f7a734d0fcaf71609570291ef josueFariasVega <jf0981157235@gmail.com> 1759533741 -0300	commit: Remove nodeVersion from vercel.json - not supported in version 2
+aa9aca1b21f3bd7f7a734d0fcaf71609570291ef aa9aca1b21f3bd7f7a734d0fcaf71609570291ef josueFariasVega <jf0981157235@gmail.com> 1759533947 -0300	reset: moving to HEAD
+aa9aca1b21f3bd7f7a734d0fcaf71609570291ef fd98ff61d4e64d7b0acb7a9ca4040e02609cf323 josueFariasVega <jf0981157235@gmail.com> 1759533958 -0300	checkout: moving from main to develop
+fd98ff61d4e64d7b0acb7a9ca4040e02609cf323 fd98ff61d4e64d7b0acb7a9ca4040e02609cf323 josueFariasVega <jf0981157235@gmail.com> 1759533979 -0300	reset: moving to HEAD
+fd98ff61d4e64d7b0acb7a9ca4040e02609cf323 bcc8013d7b54c31d921c27bdd8d20a0e64896931 josueFariasVega <jf0981157235@gmail.com> 1759534038 -0300	commit (cherry-pick): Remove nodeVersion from vercel.json - not supported in version 2
+bcc8013d7b54c31d921c27bdd8d20a0e64896931 dd47c7f3394b97aaefc551ad730ee5d0105ab539 josueFariasVega <jf0981157235@gmail.com> 1759534070 -0300	commit (cherry-pick): Fix Vercel deployment: Move Vite to devDependencies and update install command
+dd47c7f3394b97aaefc551ad730ee5d0105ab539 dd47c7f3394b97aaefc551ad730ee5d0105ab539 josueFariasVega <jf0981157235@gmail.com> 1759548908 -0300	reset: moving to HEAD
+dd47c7f3394b97aaefc551ad730ee5d0105ab539 c4e48214296e68d72e01b3eb9bbf1289febdfe68 josueFariasVega <jf0981157235@gmail.com> 1759549302 -0300	commit: Fix: Add Tailwind CSS v4 configuration and IconCloud component
+c4e48214296e68d72e01b3eb9bbf1289febdfe68 c4e48214296e68d72e01b3eb9bbf1289febdfe68 josueFariasVega <jf0981157235@gmail.com> 1759549638 -0300	reset: moving to HEAD
+c4e48214296e68d72e01b3eb9bbf1289febdfe68 20f1c40071e4b63ba2d8b86497ce5df33d6c6e02 josueFariasVega <jf0981157235@gmail.com> 1759549737 -0300	commit: Complete project setup with Tailwind CSS v4 and all configurations
+20f1c40071e4b63ba2d8b86497ce5df33d6c6e02 aa9aca1b21f3bd7f7a734d0fcaf71609570291ef josueFariasVega <jf0981157235@gmail.com> 1759550043 -0300	checkout: moving from develop to main
+aa9aca1b21f3bd7f7a734d0fcaf71609570291ef aa9aca1b21f3bd7f7a734d0fcaf71609570291ef josueFariasVega <jf0981157235@gmail.com> 1759550172 -0300	reset: moving to HEAD
+aa9aca1b21f3bd7f7a734d0fcaf71609570291ef caf377fb7d6bf32d078e27486bab3fb1644b5e94 josueFariasVega <jf0981157235@gmail.com> 1759550532 -0300	commit: Merge develop to main: Complete project setup with Tailwind CSS v4 and IconCloud component
+caf377fb7d6bf32d078e27486bab3fb1644b5e94 8f4d72ebc8416be49b0da101fc715a8e786fa34a josueFariasVega <jf0981157235@gmail.com> 1759551270 -0300	commit: Simplify Vercel config for better compatibility
