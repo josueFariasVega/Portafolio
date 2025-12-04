@@ -1,5 +1,0 @@
-0000000000000000000000000000000000000000 fd98ff61d4e64d7b0acb7a9ca4040e02609cf323 josueFariasVega <jf0981157235@gmail.com> 1759533958 -0300	branch: Created from origin/develop
-fd98ff61d4e64d7b0acb7a9ca4040e02609cf323 bcc8013d7b54c31d921c27bdd8d20a0e64896931 josueFariasVega <jf0981157235@gmail.com> 1759534038 -0300	commit (cherry-pick): Remove nodeVersion from vercel.json - not supported in version 2
-bcc8013d7b54c31d921c27bdd8d20a0e64896931 dd47c7f3394b97aaefc551ad730ee5d0105ab539 josueFariasVega <jf0981157235@gmail.com> 1759534070 -0300	commit (cherry-pick): Fix Vercel deployment: Move Vite to devDependencies and update install command
-dd47c7f3394b97aaefc551ad730ee5d0105ab539 c4e48214296e68d72e01b3eb9bbf1289febdfe68 josueFariasVega <jf0981157235@gmail.com> 1759549302 -0300	commit: Fix: Add Tailwind CSS v4 configuration and IconCloud component
-c4e48214296e68d72e01b3eb9bbf1289febdfe68 20f1c40071e4b63ba2d8b86497ce5df33d6c6e02 josueFariasVega <jf0981157235@gmail.com> 1759549737 -0300	commit: Complete project setup with Tailwind CSS v4 and all configurations
